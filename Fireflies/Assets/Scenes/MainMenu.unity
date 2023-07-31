@@ -859,7 +859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433854312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1928772054}
+        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433854312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,16 +993,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 8f41cefecf73da449addc4b7b2bf4173, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1928772054}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 0-0
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1552883061
@@ -1223,6 +1235,7 @@ GameObject:
   - component: {fileID: 1928772053}
   - component: {fileID: 1928772052}
   - component: {fileID: 1928772051}
+  - component: {fileID: 1928772054}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1280,6 +1293,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928772054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928772050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ab1c9b5e503de40b07c175a3f486cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1552883060}
+  quit: {fileID: 1433854311}
 --- !u!1 &2060243947
 GameObject:
   m_ObjectHideFlags: 0
