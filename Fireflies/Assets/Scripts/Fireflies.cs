@@ -14,7 +14,10 @@ public class Fireflies : MonoBehaviour
     {
         //Debug.Log("is object active: " + gameObject.activeInHierarchy);
         nextPos = posF[0];//does immediately; will edit later for player action
-        StartCoroutine(fireflyMovement());
+    }
+    void Update()
+    {
+        StartCoroutine(fireflyMovement());   
     }
     //use OnTriggerEnter2D/OnTriggerExit2D for collison bw fireflies and player
     // Update is called once per frame
@@ -25,6 +28,11 @@ public class Fireflies : MonoBehaviour
     IEnumerator fireflyMovement()
     {
         yield return new WaitForSeconds(5f);
+        MoveFireflies();
+       
+    }
+    void MoveFireflies()//ctr+k+c to block comment; ctr +k+u to undo
+    {
         if (transform.position == nextPos.position)//corrects position to new pt
         {
             nextPosI++;
@@ -37,24 +45,6 @@ public class Fireflies : MonoBehaviour
         else//moves obj to new position without delay
         {
             transform.position = Vector3.MoveTowards(transform.position, nextPos.position, spdF * Time.deltaTime);
-            yield return new WaitForSeconds(5f);
         }
-        StartCoroutine(fireflyMovement());
     }
-    //void MoveFireflies()//ctr+k+c to block comment; ctr +k+u to undo
-    //{
-    //    if (transform.position == nextPos.position)//corrects position to new pt
-    //    {
-    //        nextPosI++;
-    //        if (nextPosI >= posF.Length)
-    //        {
-    //            nextPosI = 0;
-    //        }
-    //        nextPos = posF[nextPosI];
-    //    }
-    //    else//moves obj to new position without delay
-    //    {
-    //        transform.position = Vector3.MoveTowards(transform.position, nextPos.position, spdF * Time.deltaTime);
-    //    }
-    //}
 }

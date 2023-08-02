@@ -471,7 +471,7 @@ MonoBehaviour:
   posF:
   - {fileID: 1020920622}
   - {fileID: 1466278283}
-  spdF: 12
+  spdF: 7
 --- !u!58 &1511291327
 CircleCollider2D:
   m_ObjectHideFlags: 0
