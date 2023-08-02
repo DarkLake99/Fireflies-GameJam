@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D charM;
-    float horiMove = 0f;
-    float charSpeed = 30f;
+    float horiMove;
+    [SerializeField]float charSpeed = 30f;
     bool charJump = false;
     //took out start as this is movement
     // Update is called once per frame

@@ -12,28 +12,49 @@ public class Fireflies : MonoBehaviour
     int nextPosI;
     void Start()
     {
+        //Debug.Log("is object active: " + gameObject.activeInHierarchy);
         nextPos = posF[0];//does immediately; will edit later for player action
+        StartCoroutine(fireflyMovement());
     }
     //use OnTriggerEnter2D/OnTriggerExit2D for collison bw fireflies and player
     // Update is called once per frame
-    void Update()
+    //void FixedUpdate()
+    //{
+    //    MoveFireflies();
+    //}
+    IEnumerator fireflyMovement()
     {
-        MoveFireflies();
-    }
-    void MoveFireflies()
-    {
-        if(transform.position == nextPos.position)
+        yield return new WaitForSeconds(5f);
+        if (transform.position == nextPos.position)//corrects position to new pt
         {
             nextPosI++;
-            if(nextPosI >= posF.Length) 
+            if (nextPosI >= posF.Length)
             {
                 nextPosI = 0;
             }
             nextPos = posF[nextPosI];
         }
-        else
+        else//moves obj to new position without delay
         {
-            transform.position = Vector3.MoveTowards(transform.position, nextPos.position,spdF *Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, nextPos.position, spdF * Time.deltaTime);
+            yield return new WaitForSeconds(5f);
         }
+        StartCoroutine(fireflyMovement());
     }
+    //void MoveFireflies()//ctr+k+c to block comment; ctr +k+u to undo
+    //{
+    //    if (transform.position == nextPos.position)//corrects position to new pt
+    //    {
+    //        nextPosI++;
+    //        if (nextPosI >= posF.Length)
+    //        {
+    //            nextPosI = 0;
+    //        }
+    //        nextPos = posF[nextPosI];
+    //    }
+    //    else//moves obj to new position without delay
+    //    {
+    //        transform.position = Vector3.MoveTowards(transform.position, nextPos.position, spdF * Time.deltaTime);
+    //    }
+    //}
 }

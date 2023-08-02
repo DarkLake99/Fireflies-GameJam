@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8984820638394698359}
   - component: {fileID: 8411935349048394015}
   - component: {fileID: 5633387098071595767}
+  - component: {fileID: 543007293884053984}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2733, y: -4.3549, z: 0}
-  m_LocalScale: {x: 19.747044, y: 0.7101, z: 1}
+  m_LocalScale: {x: 8.530723, y: 0.7101, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -131,3 +132,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &543007293884053984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244810013085126968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844caaaf04ca8004c9807f74a2403f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platPoint: {fileID: 0}
+  movePlat: 1
+  fireflyLike: 0
+  spdPlat: 20
+  fly: {fileID: 0}
