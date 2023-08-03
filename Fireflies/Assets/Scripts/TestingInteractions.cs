@@ -34,16 +34,16 @@ public class TestingInteractions : MonoBehaviour
         }
         transform.position = Vector3.MoveTowards(transform.position, oldpt.position, 5f * Time.deltaTime * direction);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Firefly"))
-        {
-            Debug.Log("Collision works:"+ gameObject.name + " firefly");
-        }
-        else if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Collision works:" + gameObject.name + " player");
-        }
+    //private void OnCollisionEnter2D(Collision2D collision)//no collision happening
+    //{
+    //    if (collision.gameObject.CompareTag("Firefly"))
+    //    {
+    //        Debug.Log("Collision works:"+ gameObject.name + " firefly");
+    //    }
+    //    else if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        Debug.Log("Collision works:" + gameObject.name + " player");
+    //    }
 
-    }
+    //}
 }
