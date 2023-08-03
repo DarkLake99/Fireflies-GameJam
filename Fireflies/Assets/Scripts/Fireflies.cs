@@ -49,6 +49,6 @@ public class Fireflies : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("is it triggering HERE?");
+        //Debug.Log("is it triggering HERE?");
     }
 }

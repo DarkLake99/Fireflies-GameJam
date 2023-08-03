@@ -28,7 +28,7 @@ public class PlatformController : MonoBehaviour
         if (collision.gameObject.tag == "Firefly")
         {
             Debug.Log("entered trigger state");
-            transform.position = Vector3.MoveTowards(oldPt, platPoint.position, spdPlat * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(oldPt, platPoint.position, spdPlat * Time.deltaTime);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -36,7 +36,7 @@ public class PlatformController : MonoBehaviour
         if (collision.gameObject.tag == "Firefly")
         {
             Debug.Log("is object exiting collision");
-            transform.position = Vector3.MoveTowards(platPoint.position, oldPt, spdPlat * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(platPoint.position, oldPt, spdPlat * Time.deltaTime);
         }
     }
 }
