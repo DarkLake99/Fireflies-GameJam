@@ -9,34 +9,46 @@ public class PlatformController : MonoBehaviour
     [SerializeField] bool fireflyLike;//optional code to create platforms that closes when fireflies are near
     [SerializeField] float spdPlat = 20f;
     public Fireflies fly;
-    private Vector3 oldPt;
+    private Transform oldPt;
+    bool trigMoveEnter=false;
+    bool trigMoveExit = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        oldPt = transform.position;
+        oldPt = this.transform;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        
+        if ( trigMoveEnter ) 
+        {
+            transform.position = Vector3.MoveTowards(oldPt.position, platPoint.position, spdPlat * Time.deltaTime);
+            trigMoveEnter = false;
+        }
+        else if(trigMoveExit)
+        {
+            Debug.Log("did it exit properly? & oldPt: "+ oldPt.transform);
+            transform.position = Vector3.MoveTowards(platPoint.position, oldPt.position, spdPlat * Time.deltaTime);
+            trigMoveExit = false;
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("is Object triggering???");
+        //Debug.Log("is Object triggering???");
         if (collision.gameObject.tag == "Firefly")
         {
-            Debug.Log("entered trigger state");
-            transform.position = Vector3.MoveTowards(oldPt, platPoint.position, spdPlat * Time.deltaTime);
+            //Debug.Log("entered trigger state");
+            trigMoveEnter = true;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Firefly")
         {
-            Debug.Log("is object exiting collision");
-            transform.position = Vector3.MoveTowards(platPoint.position, oldPt, spdPlat * Time.deltaTime);
+            trigMoveExit = true;
         }
     }
 }
