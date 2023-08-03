@@ -47,4 +47,8 @@ public class Fireflies : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, nextPos.position, spdF * Time.deltaTime);
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("is it triggering HERE?");
+    }
 }

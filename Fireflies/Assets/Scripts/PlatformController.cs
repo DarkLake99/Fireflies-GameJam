@@ -14,7 +14,7 @@ public class PlatformController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        oldPt = transform.position;
     }
 
     void FixedUpdate()
@@ -24,16 +24,19 @@ public class PlatformController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("is Object triggering");
-        if (collision.tag== "Firefly")
+        Debug.Log("is Object triggering???");
+        if (collision.gameObject.tag == "Firefly")
         {
-            oldPt = transform.position;
-            transform.position = Vector3.MoveTowards(transform.position,platPoint.position,spdPlat *Time.fixedDeltaTime);
+            Debug.Log("entered trigger state");
+            transform.position = Vector3.MoveTowards(oldPt, platPoint.position, spdPlat * Time.fixedDeltaTime);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("is object exiting trigger");
-        transform.position = Vector3.MoveTowards(transform.position, oldPt, spdPlat * Time.fixedDeltaTime);
+        if (collision.gameObject.tag == "Firefly")
+        {
+            Debug.Log("is object exiting collision");
+            transform.position = Vector3.MoveTowards(platPoint.position, oldPt, spdPlat * Time.fixedDeltaTime);
+        }
     }
 }
