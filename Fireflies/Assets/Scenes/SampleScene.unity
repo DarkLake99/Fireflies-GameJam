@@ -120,6 +120,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &650031700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650031701}
+  m_Layer: 0
+  m_Name: PlatformPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &650031701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650031700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.81, y: 1.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020920621
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +493,14 @@ PrefabInstance:
       propertyPath: fly
       value: 
       objectReference: {fileID: 1511291326}
+    - target: {fileID: 2370581212655393438, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: spdPlat
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370581212655393438, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: platPoint
+      value: 
+      objectReference: {fileID: 650031701}
     - target: {fileID: 2596716769268232774, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
       propertyPath: m_Name
       value: PlatformMove
@@ -579,3 +618,4 @@ SceneRoots:
   - {fileID: 1020920622}
   - {fileID: 1466278283}
   - {fileID: 3415369591093037802}
+  - {fileID: 650031701}

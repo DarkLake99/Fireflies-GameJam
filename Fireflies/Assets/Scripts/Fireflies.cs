@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fireflies : MonoBehaviour
 {
     [SerializeField] Transform[] posF;
-    [SerializeField] float spdF =30f;
+    [SerializeField] float spdF = 30f;
     Transform nextPos;
     
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class Fireflies : MonoBehaviour
     //{
     //    MoveFireflies();
     //}
-    IEnumerator fireflyMovement()
+    IEnumerator fireflyMovement()//doesnt work for some reason; the delay
     {
         yield return new WaitForSeconds(5f);
         MoveFireflies();

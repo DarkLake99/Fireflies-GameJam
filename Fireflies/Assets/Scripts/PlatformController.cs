@@ -7,10 +7,10 @@ public class PlatformController : MonoBehaviour
     [SerializeField] Transform platPoint;
     [SerializeField] bool movePlat;
     [SerializeField] bool fireflyLike;//optional code to create platforms that closes when fireflies are near
-    [SerializeField] float spdPlat = 20f;
+    [SerializeField] float spdPlat = 5f;
     public Fireflies fly;
     private Transform oldPt;
-    bool trigMoveEnter=false;
+    bool trigMoveEnter = false;
     bool trigMoveExit = false;
     
     // Start is called before the first frame update
@@ -23,13 +23,13 @@ public class PlatformController : MonoBehaviour
     {
         if ( trigMoveEnter ) 
         {
-            transform.position = Vector3.MoveTowards(oldPt.position, platPoint.position, spdPlat * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, platPoint.position, spdPlat * Time.deltaTime);
             trigMoveEnter = false;
         }
         else if(trigMoveExit)
         {
-            Debug.Log("did it exit properly? & oldPt: "+ oldPt.transform);
-            transform.position = Vector3.MoveTowards(platPoint.position, oldPt.position, spdPlat * Time.deltaTime);
+            Debug.Log("did it exit properly? & oldPt: "+ oldPt.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, oldPt.position, spdPlat * Time.deltaTime);
             trigMoveExit = false;
         }
 
