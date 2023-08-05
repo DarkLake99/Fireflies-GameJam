@@ -21,9 +21,14 @@ public class ButtonManager : MonoBehaviour
     {
 
     }
+    void mainScene()
+    {
+        Debug.Log("go to main menu");
+        SceneManager.LoadScene(0);
+    }
     public void ChangeScene(string sceneN)
     {
-        Debug.Log("why u no workkkkkkkkkKKKK");
+        Debug.Log("changing scene frm "+ this.name + " to " + sceneN);
         SceneManager.LoadScene(sceneN);
     }
 
