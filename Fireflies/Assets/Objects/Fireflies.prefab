@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1373661623698463212}
   - component: {fileID: 5431287662644226524}
   - component: {fileID: 5662084965159684353}
-  m_Layer: 3
+  m_Layer: 2
   m_Name: Fireflies
   m_TagString: Firefly
   m_Icon: {fileID: 0}

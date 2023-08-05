@@ -1154,6 +1154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireflies
       objectReference: {fileID: 0}
+    - target: {fileID: 1467644412990896503, guid: f144585a44aa1234697eca981cd39aed, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5431287662644226524, guid: f144585a44aa1234697eca981cd39aed, type: 3}
       propertyPath: 'posF.Array.data[0]'
       value: 

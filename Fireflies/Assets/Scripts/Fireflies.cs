@@ -39,7 +39,8 @@ public class Fireflies : MonoBehaviour
             nextPosI++;
             if (nextPosI >= posF.Length)
             {
-                nextPosI = 0;
+                //Debug.Log("firefly ended path");
+                nextPosI--;
             }
             nextPos = posF[nextPosI];
         }

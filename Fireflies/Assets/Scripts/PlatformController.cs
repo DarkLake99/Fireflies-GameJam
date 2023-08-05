@@ -11,7 +11,6 @@ public class PlatformController : MonoBehaviour
     [SerializeField] float spdPlat = 5f;
     public Fireflies fly;
     bool trigMoveEnter = false;
-    bool trigMoveExit = false;
     
     // Start is called before the first frame update
     void Start()
