@@ -37,10 +37,10 @@ public class PlatformController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("is Object triggering???");
+        Debug.Log("is platform triggering?");
         if (collision.gameObject.tag == "Firefly")
         {
-            //Debug.Log("entered trigger state");
+            Debug.Log("entered trigger state by firefly frm plat");
             trigMoveEnter = true;
         }
     }
@@ -48,6 +48,7 @@ public class PlatformController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Firefly")
         {
+            Debug.Log("exit plat trigger by firefly");
             trigMoveExit = true;
         }
     }
