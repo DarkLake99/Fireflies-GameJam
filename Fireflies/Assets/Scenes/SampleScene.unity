@@ -888,6 +888,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a9a360c8f392d488556c87cd9c0361, type: 3}
+--- !u!1 &1579104726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2596716769268232774, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+  m_PrefabInstance: {fileID: 3415369591093037802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1579104732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579104726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844caaaf04ca8004c9807f74a2403f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platPoint: {fileID: 650031701}
+  platPointOrg: {fileID: 449586365}
+  movePlat: 1
+  spdPlat: 5
+  fly: {fileID: 1511291326}
 --- !u!1 &1897179320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,10 +1090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
-    - target: {fileID: 543007293884053984, guid: c1a9a360c8f392d488556c87cd9c0361, type: 3}
-      propertyPath: movePlat
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8984820638394698359, guid: c1a9a360c8f392d488556c87cd9c0361, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0449
@@ -1125,6 +1143,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2061349933586756318, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: fly
+      value: 
+      objectReference: {fileID: 1511291326}
+    - target: {fileID: 2061349933586756318, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: movePlat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061349933586756318, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: platPoint
+      value: 
+      objectReference: {fileID: 650031701}
+    - target: {fileID: 2061349933586756318, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      propertyPath: platPointOrg
+      value: 
+      objectReference: {fileID: 449586365}
     - target: {fileID: 2370581212655393438, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
       propertyPath: fly
       value: 
@@ -1200,7 +1234,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2596716769268232774, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1579104732}
   m_SourcePrefab: {fileID: 100100000, guid: 33af8fe576447d943b7d63425d1c2efc, type: 3}
 --- !u!1001 &6423681593577904717
 PrefabInstance:
