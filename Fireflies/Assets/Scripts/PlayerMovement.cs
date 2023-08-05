@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         }
        
     }
-    //add camera crouch movement
+    //add camera crouch movement optiona;
     void FixedUpdate()//called fixed amt time per second
     {
         charM.Move(horiMove * Time.fixedDeltaTime,false, charJump);
