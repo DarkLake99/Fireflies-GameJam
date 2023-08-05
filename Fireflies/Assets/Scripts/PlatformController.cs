@@ -5,32 +5,30 @@ using UnityEngine;
 public class PlatformController : MonoBehaviour
 {
     [SerializeField] Transform platPoint;
+    [SerializeField] Transform platPointOrg;
     [SerializeField] bool movePlat;
-    [SerializeField] bool fireflyLike;//optional code to create platforms that closes when fireflies are near
+    //[SerializeField] bool fireflyLike;//optional code to create platforms that closes when fireflies are near
     [SerializeField] float spdPlat = 5f;
     public Fireflies fly;
-    private Transform oldPt;
     bool trigMoveEnter = false;
     bool trigMoveExit = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        oldPt = this.transform;
+        
     }
 
     void Update()
     {
-        if ( trigMoveEnter ) 
+        if ( trigMoveEnter && movePlat) 
         {
             transform.position = Vector3.MoveTowards(transform.position, platPoint.position, spdPlat * Time.deltaTime);
-            trigMoveEnter = false;
         }
-        else if(trigMoveExit)
+        else if(!trigMoveEnter && movePlat)
         {
-            Debug.Log("did it exit properly? & oldPt: "+ oldPt.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position, oldPt.position, spdPlat * Time.deltaTime);
-            trigMoveExit = false;
+            Debug.Log("did it exit properly? & oldPt: "+ platPointOrg.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, platPointOrg.position, spdPlat * Time.deltaTime);
         }
 
     }
@@ -49,7 +47,7 @@ public class PlatformController : MonoBehaviour
         if (collision.gameObject.tag == "Firefly")
         {
             Debug.Log("exit plat trigger by firefly");
-            trigMoveExit = true;
+            trigMoveEnter = false;
         }
     }
 }
