@@ -27,7 +27,7 @@ public class PlatformController : MonoBehaviour
         }
         else if(!trigMoveEnter && movePlat)
         {
-            Debug.Log("did it exit properly? & oldPt: "+ platPointOrg.transform.position);
+            //Debug.Log("did it exit properly? & oldPt: "+ platPointOrg.transform.position);
             transform.position = Vector3.MoveTowards(transform.position, platPointOrg.position, spdPlat * Time.deltaTime);
         }
 
@@ -46,7 +46,7 @@ public class PlatformController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Firefly")
         {
-            Debug.Log("exit plat trigger by firefly");
+            //Debug.Log("exit plat trigger by firefly");
             trigMoveEnter = false;
         }
     }
