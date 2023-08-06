@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Button start;
-    public Button quit;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +19,17 @@ public class ButtonManager : MonoBehaviour
     {
 
     }
+    public void SettingsMenuOn(GameObject settings)
+    {
+        Debug.Log("heh you thought");
+        settings.SetActive(true);
+        //Settings menu. enable
+        //time.scale =0;
+    }
+    //void SettingsMenuOff()
+    //{
+
+    //}
     void mainScene()
     {
         Debug.Log("go to main menu");
@@ -28,7 +37,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void ChangeScene(string sceneN)
     {
-        Debug.Log("changing scene frm "+ this.name + " to " + sceneN);
+        Debug.Log("changing scene frm "+ SceneManager.GetActiveScene() + " to " + sceneN);
         SceneManager.LoadScene(sceneN);
     }
 
