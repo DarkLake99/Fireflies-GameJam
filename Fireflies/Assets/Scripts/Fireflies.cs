@@ -7,6 +7,7 @@ public class Fireflies : MonoBehaviour
     [SerializeField] Transform[] posF;
     [SerializeField] float spdF = 30f;
     Transform nextPos;
+    public ButtonManager endgame;
     bool moveFly = false;
     
     // Start is called before the first frame update
@@ -41,6 +42,7 @@ public class Fireflies : MonoBehaviour
             {
                 //Debug.Log("firefly ended path");
                 nextPosI--;
+                endgame.ChangeScene("Credits");
             }
             nextPos = posF[nextPosI];
         }

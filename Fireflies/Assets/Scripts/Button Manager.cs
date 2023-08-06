@@ -30,7 +30,7 @@ public class ButtonManager : MonoBehaviour
     //{
 
     //}
-    void mainScene()
+    public void mainScene()
     {
         Debug.Log("go to main menu");
         SceneManager.LoadScene(0);
@@ -40,7 +40,12 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("changing scene frm "+ SceneManager.GetActiveScene() + " to " + sceneN);
         SceneManager.LoadScene(sceneN);
     }
-
+    public void resetScene()
+    {
+        Debug.Log("resetting scene");
+        Scene scene = SceneManager.GetActiveScene();
+        ChangeScene(scene.name);
+    }
     public void QuitGame()
     {
         Debug.Log("initial victories");

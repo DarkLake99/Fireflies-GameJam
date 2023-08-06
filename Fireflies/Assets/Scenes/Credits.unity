@@ -294,9 +294,17 @@ PrefabInstance:
       value: 'Back to Previous '
       objectReference: {fileID: 0}
     - target: {fileID: 7468794543296418626, guid: f6b7e6b1c25a93c4aa54507bbae1355b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468794543296418626, guid: f6b7e6b1c25a93c4aa54507bbae1355b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 239407070}
+    - target: {fileID: 7468794543296418626, guid: f6b7e6b1c25a93c4aa54507bbae1355b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: mainScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7468794543296418626, guid: f6b7e6b1c25a93c4aa54507bbae1355b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: MainMenu
